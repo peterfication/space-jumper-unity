@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GameObject[] startingPlatforms = GameObject.FindGameObjectsWithTag("StartPlatform");
+        transform.position = startingPlatforms[0].transform.position + new Vector3(0, (float)-0.25, 0);
     }
 }

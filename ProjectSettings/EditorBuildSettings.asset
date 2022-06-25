@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/end_lost.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/level_001.unity
+    guid: d1d5ea9af86024e6cb573a916ad67225
   m_configObjects: {}
