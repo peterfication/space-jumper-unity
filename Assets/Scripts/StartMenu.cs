@@ -7,6 +7,6 @@ public class StartMenu : MonoBehaviour
 {
     public void LoadFirstLevel()
     {
-        SceneManager.LoadScene("end_lost");
+        SceneManager.LoadScene("level_001");
     }
 }
