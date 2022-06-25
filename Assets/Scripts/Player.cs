@@ -5,13 +5,18 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
+    private Animator animator;
+    public Sprite spriteStay;
+    public Sprite spriteWalk;
 
     public bool isMoving = false;
 
     private void Start()
     {
         MoveToStartPlatform();
+
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     private void MoveToStartPlatform()
@@ -61,6 +66,8 @@ public class Player : MonoBehaviour
     private IEnumerator MovePlayerMovement(Vector3 direction)
     {
         isMoving = true;
+        spriteRenderer.sprite = spriteWalk;
+        animator.enabled = true;
 
         float timeToMove = 0.2f;
 
@@ -74,8 +81,11 @@ public class Player : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-
+        // Make sure we _exactly_ hit the targetPos
         transform.position = targetPos;
+
+        animator.enabled = false;
+        spriteRenderer.sprite = spriteStay;
         isMoving = false;
     }
 }

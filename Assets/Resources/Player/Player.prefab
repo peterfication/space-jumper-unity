@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8856377323052767805}
   - component: {fileID: 7741049903139436290}
   - component: {fileID: 3016778615604451591}
+  - component: {fileID: 8263561642254998833}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -124,3 +125,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a12489183e7e45f7a6b6ef205c0fdb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteStay: {fileID: 21300000, guid: 7147553b1e72eec449c5ace4f9f4d13a, type: 3}
+  spriteWalk: {fileID: -7750761410467519339, guid: dfc7090c56f3626418196653e1eb610d, type: 3}
+  isMoving: 0
+--- !u!95 &8263561642254998833
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7471306062568753256}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b9901ed754b2c1a469259156df03f85c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
