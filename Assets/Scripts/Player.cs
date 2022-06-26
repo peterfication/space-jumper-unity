@@ -6,10 +6,15 @@ public class Player : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     private Animator animator;
+    private BoxCollider2D boxCollider;
+
+    // isMoving needs to be public because it is used in Platform.OnTriggerStay2D.
+    public bool isMoving = false;
+    private bool onPlatform = true;
+    private bool dead = false;
     public Sprite spriteStay;
     public Sprite spriteWalk;
-
-    public bool isMoving = false;
+    public ContactFilter2D filter;
 
     private void Start()
     {
@@ -17,18 +22,34 @@ public class Player : MonoBehaviour
 
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-    }
-
-    private void MoveToStartPlatform()
-    {
-        GameObject[] startingPlatforms = GameObject.FindGameObjectsWithTag("StartPlatform");
-        transform.position = startingPlatforms[0].transform.position + new Vector3(0, (float)-0.25, 0);
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     private void FixedUpdate()
     {
-        FlipSprite();
-        MovePlayer();
+        // Make sure the player can only move if it is not dead.
+        if (!dead)
+        {
+            FlipSprite();
+            MovePlayer();
+        }
+    }
+
+    private void Update()
+    {
+        HandleCollision();
+        CheckForDead();
+        HandleDeath();
+    }
+
+    // Find the platform tagged with "StartPlatform" and move the player there.
+    // This makes it easier to change the start platform without manually aligning
+    // the player in the scene editor, because the player is not on the grid, but a little
+    // bit below.
+    private void MoveToStartPlatform()
+    {
+        GameObject[] startingPlatforms = GameObject.FindGameObjectsWithTag("StartPlatform");
+        transform.position = startingPlatforms[0].transform.position + new Vector3(0, (float)-0.25, 0);
     }
 
     // Flip sprite depending on going left or right.
@@ -87,5 +108,47 @@ public class Player : MonoBehaviour
         animator.enabled = false;
         spriteRenderer.sprite = spriteStay;
         isMoving = false;
+    }
+
+    // Go through all collisions and check whether there is at least one
+    // collision with a platform by checking that the parents collision object
+    // is the "Platforms" GameObject.
+    private void HandleCollision()
+    {
+        Collider2D[] hits = new Collider2D[10];
+        boxCollider.OverlapCollider(filter, hits);
+
+        // We need a temporay variable here, because the player might
+        // collide with other things, and then, the onPlatform would be
+        // false for a short amount of time, even though the player does
+        // collider with a platform.
+        bool tempOnPlatform = false;
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if (hits[i] != null && hits[i].transform.parent.name == "Platforms")
+                tempOnPlatform = true;
+        }
+        onPlatform = tempOnPlatform;
+    }
+
+    // Check whether dead has to be set to true. A player is dead if it is
+    // either not moving or not on a platform. Both checks are necessary
+    // because during a jump, the player is not on platform but is moving,
+    // so it is not dead even though it is not on a platform.
+    private void CheckForDead()
+    {
+        if (!isMoving && !onPlatform)
+        {
+            dead = true;
+        }
+    }
+
+    // TODO do something when the player dies.
+    private void HandleDeath()
+    {
+        if (dead)
+        {
+            Debug.Log("Die!");
+        }
     }
 }
