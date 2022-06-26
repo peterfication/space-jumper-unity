@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -196,6 +197,7 @@ public class Player : MonoBehaviour
 
         Debug.Log("Die!");
         StartCoroutine(AnimatePlayerFallingDown());
+        StartCoroutine(ReloadScene());
     }
 
     private IEnumerator AnimatePlayerFallingDown()
@@ -213,5 +215,12 @@ public class Player : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+    }
+
+    // Wait for 3 seconds so the player can fall and then reload the current level
+    private IEnumerator ReloadScene()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
