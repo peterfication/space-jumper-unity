@@ -10,10 +10,14 @@ public class Player : MonoBehaviour
 
     // isMoving needs to be public because it is used in Platform.OnTriggerStay2D.
     public bool isMoving = false;
+    private bool jump = false;
     private bool onPlatform = true;
     private bool dead = false;
     public Sprite spriteStay;
     public Sprite spriteWalk;
+    public Sprite spriteJump;
+    public RuntimeAnimatorController animatorWalk;
+    public RuntimeAnimatorController animatorJump;
     public ContactFilter2D filter;
 
     private void Start()
@@ -31,6 +35,7 @@ public class Player : MonoBehaviour
         if (!dead)
         {
             FlipSprite();
+            CheckForJump();
             MovePlayer();
         }
     }
@@ -62,24 +67,53 @@ public class Player : MonoBehaviour
             spriteRenderer.flipX = true;
     }
 
+    // Set jump to true if the "Fire2" button is being hold down
+    // and hence change the sprite for a visual feedback.
+    // But only if the player is not moving.
+    private void CheckForJump()
+    {
+        if (isMoving)
+            return;
+
+        jump = Input.GetButton("Fire2");
+
+        if (jump)
+        {
+            spriteRenderer.sprite = spriteJump;
+            animator.runtimeAnimatorController = animatorJump;
+            animator.enabled = true;
+        }
+        else
+        {
+            animator.enabled = false;
+            spriteRenderer.sprite = spriteStay;
+        }
+    }
+
     // Move the player up, down, left and right depending on
     // GetAxisRaw.
+    // But only if the player is not moving already.
     private void MovePlayer()
     {
+        if (isMoving)
+            return;
+
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        if (!isMoving)
-        {
-            if (x == -1)
-                StartCoroutine(MovePlayerMovement(Vector3.left));
-            if (x == 1)
-                StartCoroutine(MovePlayerMovement(Vector3.right));
-            if (y == 1)
-                StartCoroutine(MovePlayerMovement(Vector3.up));
-            if (y == -1)
-                StartCoroutine(MovePlayerMovement(Vector3.down));
-        }
+        // When jumping, the player moves two platforms at a time.
+        int movementLength = 1;
+        if (jump)
+            movementLength = 2;
+
+        if (x == -1)
+            StartCoroutine(MovePlayerMovement(movementLength * Vector3.left));
+        if (x == 1)
+            StartCoroutine(MovePlayerMovement(movementLength * Vector3.right));
+        if (y == 1)
+            StartCoroutine(MovePlayerMovement(movementLength * Vector3.up));
+        if (y == -1)
+            StartCoroutine(MovePlayerMovement(movementLength * Vector3.down));
     }
 
     // Actually move the player to the specified direction
@@ -87,8 +121,14 @@ public class Player : MonoBehaviour
     private IEnumerator MovePlayerMovement(Vector3 direction)
     {
         isMoving = true;
-        spriteRenderer.sprite = spriteWalk;
-        animator.enabled = true;
+        // Only change the sprite and animator, if it's not a jump,
+        // because the jump has an animated sprite already.
+        if (!jump)
+        {
+            spriteRenderer.sprite = spriteWalk;
+            animator.runtimeAnimatorController = animatorWalk;
+            animator.enabled = true;
+        }
 
         float timeToMove = 0.2f;
 
