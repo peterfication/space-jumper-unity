@@ -183,12 +183,35 @@ public class Player : MonoBehaviour
         }
     }
 
-    // TODO do something when the player dies.
+    // Handle all the things that should happen when a player dies.
     private void HandleDeath()
     {
-        if (dead)
+        if (!dead)
+            return;
+
+        // Player should now be behind platforms
+        spriteRenderer.sortingLayerName = "Default";
+        // No further collisions should happen anymore
+        boxCollider.enabled = false;
+
+        Debug.Log("Die!");
+        StartCoroutine(AnimatePlayerFallingDown());
+    }
+
+    private IEnumerator AnimatePlayerFallingDown()
+    {
+        float timeToMove = 2f;
+        Vector3 direction = new Vector3(0, -20, 0);
+        Vector3 origPos = transform.position;
+        Vector3 targetPos = origPos + direction;
+
+        float elapsedTime = 0;
+        while (elapsedTime < timeToMove)
         {
-            Debug.Log("Die!");
+            transform.Rotate(0, 0, 0.4f);
+            transform.position = Vector3.Lerp(origPos, targetPos, (elapsedTime / timeToMove));
+            elapsedTime += Time.deltaTime;
+            yield return null;
         }
     }
 }
