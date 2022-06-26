@@ -4,13 +4,13 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 2465746166884020215
-    second: AstroJump_0
+    second: PlayerJump_0
   - first:
       213: -2685817919768189198
-    second: AstroJump_1
+    second: PlayerJump_1
   - first:
       213: 169628553128679001
-    second: AstroJump_2
+    second: PlayerJump_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -137,7 +137,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AstroJump_0
+      name: PlayerJump_0
       rect:
         serializedVersion: 2
         x: 105
@@ -154,11 +154,11 @@ TextureImporter:
       spriteID: a031799910c7b5b49a74ab8b6191e157
       internalID: 2465746166884020215
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AstroJump_1
+      name: PlayerJump_1
       rect:
         serializedVersion: 2
         x: 570
@@ -175,11 +175,11 @@ TextureImporter:
       spriteID: d72abde7a5058324f9ddcda036eceb33
       internalID: -2685817919768189198
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AstroJump_2
+      name: PlayerJump_2
       rect:
         serializedVersion: 2
         x: 1065
@@ -196,7 +196,7 @@ TextureImporter:
       spriteID: 556a4ab6e27aac2458907957306bf81a
       internalID: 169628553128679001
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     outline: []
@@ -205,17 +205,17 @@ TextureImporter:
     spriteID: d30d10d5844463c43aa09221383e1d16
     internalID: 0
     vertices: []
-    indices: 
+    indices:
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AstroJump_1: -2685817919768189198
-      AstroJump_0: 2465746166884020215
-      AstroJump_2: 169628553128679001
-  spritePackingTag: 
+      PlayerJump_1: -2685817919768189198
+      PlayerJump_0: 2465746166884020215
+      PlayerJump_2: 169628553128679001
+  spritePackingTag:
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+  userData:
+  assetBundleName:
+  assetBundleVariant:

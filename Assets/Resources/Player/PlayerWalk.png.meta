@@ -4,31 +4,31 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -7750761410467519339
-    second: AstroWalk_0
+    second: PlayerWalk_0
   - first:
       213: 2356262865142047882
-    second: AstroWalk_1
+    second: PlayerWalk_1
   - first:
       213: 3586078263622456036
-    second: AstroWalk_2
+    second: PlayerWalk_2
   - first:
       213: -5082971117998345730
-    second: AstroWalk_3
+    second: PlayerWalk_3
   - first:
       213: 4854638451998381413
-    second: AstroWalk_4
+    second: PlayerWalk_4
   - first:
       213: 1477211506544611
-    second: AstroWalk_5
+    second: PlayerWalk_5
   - first:
       213: 2934233246830421270
-    second: AstroWalk_6
+    second: PlayerWalk_6
   - first:
       213: -3258305651147157043
-    second: AstroWalk_7
+    second: PlayerWalk_7
   - first:
       213: 5552983428473831152
-    second: AstroWalk_8
+    second: PlayerWalk_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -155,7 +155,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AstroWalk_0
+      name: PlayerWalk_0
       rect:
         serializedVersion: 2
         x: 237
@@ -172,11 +172,11 @@ TextureImporter:
       spriteID: f76c7e0bdad32194c8d2b2c9c3f76339
       internalID: -7750761410467519339
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AstroWalk_1
+      name: PlayerWalk_1
       rect:
         serializedVersion: 2
         x: 657
@@ -193,11 +193,11 @@ TextureImporter:
       spriteID: d0c5d825e9d8381428ee210771545d13
       internalID: 2356262865142047882
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AstroWalk_2
+      name: PlayerWalk_2
       rect:
         serializedVersion: 2
         x: 1107
@@ -214,11 +214,11 @@ TextureImporter:
       spriteID: 72ea092f7fa0ae541aadf44bbf005597
       internalID: 3586078263622456036
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AstroWalk_3
+      name: PlayerWalk_3
       rect:
         serializedVersion: 2
         x: 1527
@@ -235,11 +235,11 @@ TextureImporter:
       spriteID: b295fdf72fb9fbf40862e6acfb39e244
       internalID: -5082971117998345730
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AstroWalk_4
+      name: PlayerWalk_4
       rect:
         serializedVersion: 2
         x: 1992
@@ -256,11 +256,11 @@ TextureImporter:
       spriteID: 5f52c70c0fbda7947837e9679384e448
       internalID: 4854638451998381413
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AstroWalk_5
+      name: PlayerWalk_5
       rect:
         serializedVersion: 2
         x: 2442
@@ -277,11 +277,11 @@ TextureImporter:
       spriteID: 0feaacf3fb6e70f4885a30e2876db3dc
       internalID: 1477211506544611
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AstroWalk_6
+      name: PlayerWalk_6
       rect:
         serializedVersion: 2
         x: 2907
@@ -298,11 +298,11 @@ TextureImporter:
       spriteID: f84fe5323166f664a813d426522872af
       internalID: 2934233246830421270
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: AstroWalk_7
+      name: PlayerWalk_7
       rect:
         serializedVersion: 2
         x: 3402
@@ -319,7 +319,7 @@ TextureImporter:
       spriteID: 802b343084966fa4789776c13b690489
       internalID: -3258305651147157043
       vertices: []
-      indices: 
+      indices:
       edges: []
       weights: []
     outline: []
@@ -328,22 +328,22 @@ TextureImporter:
     spriteID: 3cbb0748d716be6499bb7828bdf029c8
     internalID: 0
     vertices: []
-    indices: 
+    indices:
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      AstroWalk_0: -7750761410467519339
-      AstroWalk_7: -3258305651147157043
-      AstroWalk_3: -5082971117998345730
-      AstroWalk_2: 3586078263622456036
-      AstroWalk_5: 1477211506544611
-      AstroWalk_1: 2356262865142047882
-      AstroWalk_6: 2934233246830421270
-      AstroWalk_4: 4854638451998381413
-  spritePackingTag: 
+      PlayerWalk_0: -7750761410467519339
+      PlayerWalk_7: -3258305651147157043
+      PlayerWalk_3: -5082971117998345730
+      PlayerWalk_2: 3586078263622456036
+      PlayerWalk_5: 1477211506544611
+      PlayerWalk_1: 2356262865142047882
+      PlayerWalk_6: 2934233246830421270
+      PlayerWalk_4: 4854638451998381413
+  spritePackingTag:
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+  userData:
+  assetBundleName:
+  assetBundleVariant:
