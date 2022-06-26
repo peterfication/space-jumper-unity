@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7741049903139436290}
   - component: {fileID: 3016778615604451591}
   - component: {fileID: 8263561642254998833}
+  - component: {fileID: 5424467305246004878}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -97,7 +98,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.109794915, y: 1.2471716}
@@ -125,9 +126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a12489183e7e45f7a6b6ef205c0fdb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMoving: 0
   spriteStay: {fileID: 21300000, guid: 7147553b1e72eec449c5ace4f9f4d13a, type: 3}
   spriteWalk: {fileID: -7750761410467519339, guid: dfc7090c56f3626418196653e1eb610d, type: 3}
-  isMoving: 0
 --- !u!95 &8263561642254998833
 Animator:
   serializedVersion: 4
@@ -148,3 +149,24 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &5424467305246004878
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7471306062568753256}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
