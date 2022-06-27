@@ -8,12 +8,15 @@ public class Player : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private BoxCollider2D boxCollider;
+    private GameLogic gameLogic;
 
     // isMoving needs to be public because it is used in Platform.OnTriggerStay2D.
     public bool isMoving = false;
     private bool jump = false;
     private bool onPlatform = true;
-    private bool dead = false;
+    // dead needs to be public because it is used in Platforms.Update
+    public bool dead = false;
+    private bool winningJumpDone = false;
     public Sprite spriteStay;
     public Sprite spriteWalk;
     public Sprite spriteJump;
@@ -28,12 +31,13 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        gameLogic = GameObject.Find("GameLogic").GetComponent<GameLogic>();
     }
 
     private void FixedUpdate()
     {
         // Make sure the player can only move if it is not dead.
-        if (!dead)
+        if (!dead && !gameLogic.won)
         {
             FlipSprite();
             CheckForJump();
@@ -46,6 +50,7 @@ public class Player : MonoBehaviour
         HandleCollision();
         CheckForDead();
         HandleDeath();
+        HandleWin();
     }
 
     // Find the platform tagged with "StartPlatform" and move the player there.
@@ -195,7 +200,6 @@ public class Player : MonoBehaviour
         // No further collisions should happen anymore
         boxCollider.enabled = false;
 
-        Debug.Log("Die!");
         StartCoroutine(AnimatePlayerFallingDown());
         StartCoroutine(ReloadScene());
     }
@@ -220,7 +224,58 @@ public class Player : MonoBehaviour
     // Wait for 3 seconds so the player can fall and then reload the current level
     private IEnumerator ReloadScene()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void HandleWin()
+    {
+        if (!gameLogic.won)
+            return;
+
+        if (!winningJumpDone)
+            StartCoroutine(JumpUpAndDown());
+    }
+
+    // Move the player sprite up and down to simulate jumping happily
+    private IEnumerator JumpUpAndDown()
+    {
+        winningJumpDone = true;
+
+        // We need to wait, because the win happens, as soon the
+        // player leaves the last platform.
+        yield return new WaitForSeconds(0.1f);
+
+        float timeToMove = 0.1f;
+        Vector3 direction = new Vector3(0, 0.3f, 0);
+        Vector3 origPos = transform.position;
+        Vector3 targetPos = origPos + direction;
+
+        transform.position = origPos;
+
+        float elapsedTime = 0;
+        // Jump multiple times
+        for (int i = 0; i < 2; ++i)
+        {
+            // Jump up
+            elapsedTime = 0;
+            while (elapsedTime < timeToMove)
+            {
+                transform.position = Vector3.Lerp(origPos, targetPos, (elapsedTime / timeToMove));
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+            transform.position = targetPos;
+
+            // // Jump down
+            elapsedTime = 0;
+            while (elapsedTime < timeToMove)
+            {
+                transform.position = Vector3.Lerp(targetPos, origPos, (elapsedTime / timeToMove));
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+            transform.position = origPos;
+        }
     }
 }
