@@ -478,6 +478,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3016778615604451591, guid: e547a888a00ef4129899bfc99df19be5, type: 3}
+      propertyPath: animatorWalk
+      value: 
+      objectReference: {fileID: 9100000, guid: 242264ba8d2564bf4b65acf6b19461d4, type: 2}
     - target: {fileID: 7471306062568753256, guid: e547a888a00ef4129899bfc99df19be5, type: 3}
       propertyPath: m_Name
       value: Player
@@ -530,6 +534,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8263561642254998833, guid: e547a888a00ef4129899bfc99df19be5, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 242264ba8d2564bf4b65acf6b19461d4, type: 2}
     - target: {fileID: 8856377323052767805, guid: e547a888a00ef4129899bfc99df19be5, type: 3}
       propertyPath: m_FlipX
       value: 0
