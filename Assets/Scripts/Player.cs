@@ -26,12 +26,12 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        MoveToStartPlatform();
-
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
         gameLogic = GameObject.Find("GameLogic").GetComponent<GameLogic>();
+
+        StartCoroutine(MoveToStartPlatform());
     }
 
     private void FixedUpdate()
@@ -57,10 +57,13 @@ public class Player : MonoBehaviour
     // This makes it easier to change the start platform without manually aligning
     // the player in the scene editor, because the player is not on the grid, but a little
     // bit below.
-    private void MoveToStartPlatform()
+    private IEnumerator MoveToStartPlatform()
     {
+        // Wait for the platforms to be build
+        yield return new WaitForSeconds(0.5f);
+
         GameObject[] startingPlatforms = GameObject.FindGameObjectsWithTag("StartPlatform");
-        transform.position = startingPlatforms[0].transform.position + new Vector3(0, (float)-0.25, 0);
+        transform.position = startingPlatforms[0].transform.position + new Vector3(0, -0.25f, 0);
     }
 
     // Flip sprite depending on going left or right.
@@ -171,7 +174,17 @@ public class Player : MonoBehaviour
         bool tempOnPlatform = false;
         for (int i = 0; i < hits.Length; i++)
         {
-            if (hits[i] != null && hits[i].transform.parent.name == "Platforms")
+            if (hits[i] == null)
+                continue;
+
+            // Check for a regular platform, so a platform that
+            // is a child of the "Platforms" GameObject.
+            if (hits[i].transform.parent != null && hits[i].transform.parent.name == "Platforms")
+                tempOnPlatform = true;
+
+            // The OutOfScreen Platform where the player resides before
+            // it is moved to the StartPlatform.
+            if (hits[i].name == "OutOfScreen Platform")
                 tempOnPlatform = true;
         }
         onPlatform = tempOnPlatform;
