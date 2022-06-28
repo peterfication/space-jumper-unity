@@ -7,6 +7,6 @@ public class StartMenu : MonoBehaviour
 {
     public void LoadFirstLevel()
     {
-        SceneManager.LoadScene("level_001");
+        SceneManager.LoadScene("level_dynamic");
     }
 }
