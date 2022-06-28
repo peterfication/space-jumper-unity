@@ -60,10 +60,11 @@ public class Player : MonoBehaviour
     private IEnumerator MoveToStartPlatform()
     {
         // Wait for the platforms to be build
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.1f);
 
         GameObject[] startingPlatforms = GameObject.FindGameObjectsWithTag("StartPlatform");
-        transform.position = startingPlatforms[0].transform.position + new Vector3(0, -0.25f, 0);
+        if (startingPlatforms.Length > 0)
+            transform.position = startingPlatforms[0].transform.position + new Vector3(0, -0.25f, 0);
     }
 
     // Flip sprite depending on going left or right.

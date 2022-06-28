@@ -37,6 +37,7 @@ public class GameLogic : MonoBehaviour
     private IEnumerator LoadNextLevel()
     {
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(nextSceneName);
+        GameData.currentLevel = GameData.currentLevel + 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
