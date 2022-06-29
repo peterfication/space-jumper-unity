@@ -20,14 +20,18 @@ public class GameLogic : MonoBehaviour
 
     private void Update()
     {
-        CheckForWin();
+        StartCoroutine(CheckForWin());
     }
 
     // If there is only one platform left and the player is not dead,
     // the player has won the current level.
-    private void CheckForWin()
+    private IEnumerator CheckForWin()
     {
-        if (!playerScript.dead && platforms.transform.childCount == 1)
+        // We need to wait a bit, in order to not get a race condition
+        // of the collision logic in Player.
+        yield return new WaitForSeconds(0.3f);
+
+        if (!playerScript.dead && playerScript.onPlatform && platforms.transform.childCount == 1)
         {
             won = true;
             StartCoroutine(LoadNextLevel());

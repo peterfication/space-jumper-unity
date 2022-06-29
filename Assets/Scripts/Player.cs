@@ -13,7 +13,8 @@ public class Player : MonoBehaviour
     // isMoving needs to be public because it is used in Platform.OnTriggerStay2D.
     public bool isMoving = false;
     private bool jump = false;
-    private bool onPlatform = true;
+    // onPlatform needs to be public because it is used in GameLogic.CheckForWin
+    public bool onPlatform = true;
     // dead needs to be public because it is used in Platforms.Update
     public bool dead = false;
     private bool winningJumpDone = false;
