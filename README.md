@@ -1,6 +1,14 @@
 # Space Jumper
 
-Developed in Unity.
+A small logical game about finding the right way 🎮 Developed in Unity.
+
+## DISCLAIMER
+
+```
+The idea for SpaceJumper is originally from an old DOS game. I can't find it anywhere online
+because I forgot the name. So if somebody knows the name or even has a copy of it I would be
+very happy to hear about it! :)
+```
 
 ## Credits
 
