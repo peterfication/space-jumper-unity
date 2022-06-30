@@ -8,9 +8,10 @@ public class GameLogic : MonoBehaviour
     private Player playerScript;
     private GameObject platforms;
 
-    public string nextSceneName;
     // The won boolean needs to be public because it is used in the Player script.
     public bool won = false;
+    // This boolean is necessary to only load the next level once
+    private bool loadNextLevel = false;
 
     private void Start()
     {
@@ -40,7 +41,13 @@ public class GameLogic : MonoBehaviour
 
     private IEnumerator LoadNextLevel()
     {
+        if (loadNextLevel)
+            yield return null;
+
+        loadNextLevel = true;
+
         yield return new WaitForSeconds(1);
+
         GameData.currentLevel = GameData.currentLevel + 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
