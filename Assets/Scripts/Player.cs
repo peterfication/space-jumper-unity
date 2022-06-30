@@ -12,6 +12,10 @@ public class Player : MonoBehaviour
 
     // isMoving needs to be public because it is used in Platform.OnTriggerStay2D.
     public bool isMoving = false;
+    // The waitForNextMove is necessary to have a private variable next to isMoving
+    // so we can make sure to have one move after another, even when holding down
+    // an arrow key.
+    private bool waitForNextMove = false;
     private bool jump = false;
     // onPlatform needs to be public because it is used in GameLogic.CheckForWin
     public bool onPlatform = true;
@@ -60,8 +64,8 @@ public class Player : MonoBehaviour
     // bit below.
     private IEnumerator MoveToStartPlatform()
     {
-        // Wait for the platforms to be build
-        yield return new WaitForSeconds(0.1f);
+    // Wait for the platforms to be build
+    yield return new WaitForSeconds(0.1f);
 
         GameObject[] startingPlatforms = GameObject.FindGameObjectsWithTag("StartPlatform");
         if (startingPlatforms.Length > 0)
@@ -106,7 +110,7 @@ public class Player : MonoBehaviour
     // But only if the player is not moving already.
     private void MovePlayer()
     {
-        if (isMoving)
+        if (waitForNextMove)
             return;
 
         float x = Input.GetAxisRaw("Horizontal");
@@ -132,6 +136,7 @@ public class Player : MonoBehaviour
     private IEnumerator MovePlayerMovement(Vector3 direction)
     {
         isMoving = true;
+        waitForNextMove  = true;
         // Only change the sprite and animator, if it's not a jump,
         // because the jump has an animated sprite already.
         if (!jump)
@@ -159,6 +164,14 @@ public class Player : MonoBehaviour
         animator.enabled = false;
         spriteRenderer.sprite = spriteStay;
         isMoving = false;
+
+        // Wait a little bit, so the platform can be marked as visited.
+        // If this does not happen, a player can walk over platforms when walking
+        // fast, because isMoving is always true.
+        // An alternative would be to mark the platform as visited here and not
+        // in Platform.OnTriggerStay2D.
+        yield return new WaitForSeconds(0.1f);
+        waitForNextMove  = false;
     }
 
     // Go through all collisions and check whether there is at least one
