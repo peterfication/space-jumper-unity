@@ -85,10 +85,8 @@ public class StartMenu : MonoBehaviour
         }
         else
         {
-            Debug.Log("No level found for code");
-            // TODO This does not work
             Image inputImage = GameObject.Find("CodeInput").GetComponent<Image>();
-            inputImage.color = new Color(255, 115, 115, 255);
+            inputImage.color = new Color32(255, 115, 115, 255);
         }
     }
 }
