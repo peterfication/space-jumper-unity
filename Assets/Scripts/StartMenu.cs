@@ -5,16 +5,38 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    void Update()
+    private GameObject returnButton;
+
+    private void Start()
+    {
+        returnButton = GameObject.Find("ReturnToGameButton");
+    }
+
+    private void Update()
     {
         HandleEnter();
         HandleEsc();
+        DisplayReturnButton();
+    }
+
+    // Only display the ReturnToGameButton when the current level
+    // is not the first level.
+    private void DisplayReturnButton()
+    {
+        if (GameData.currentLevel == 0)
+        {
+            returnButton.SetActive(false);
+        }
+        else
+        {
+            returnButton.SetActive(true);
+        }
     }
 
     private void HandleEnter()
     {
         if (Input.GetKey(KeyCode.Return))
-            LoadFirstLevel();
+            LoadCurrentLevel();
     }
 
     private void HandleEsc()
@@ -24,6 +46,12 @@ public class StartMenu : MonoBehaviour
     }
 
     public void LoadFirstLevel()
+    {
+        GameData.currentLevel = 0;
+        SceneManager.LoadScene("level_dynamic");
+    }
+
+    public void LoadCurrentLevel()
     {
         SceneManager.LoadScene("level_dynamic");
     }
