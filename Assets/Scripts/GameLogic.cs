@@ -21,7 +21,18 @@ public class GameLogic : MonoBehaviour
 
     private void Update()
     {
+        MaybeLoadGameWonScene();
         StartCoroutine(CheckForWin());
+    }
+
+    // If there is no level anymore, load end_won scene
+    private void MaybeLoadGameWonScene()
+    {
+        Level currentLevel = Levels.GetCurrentLevel();
+        if (currentLevel is null)
+        {
+            SceneManager.LoadScene("end_won");
+        }
     }
 
     // If there is only one platform left and the player is not dead,
