@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Level
 {
-    public int[][] platforms;
     public string code;
+    public int number;
+    public int[][] platforms;
 }

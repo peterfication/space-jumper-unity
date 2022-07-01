@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class StartMenu : MonoBehaviour
 {
@@ -59,5 +61,24 @@ public class StartMenu : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void LoadLevelByCode()
+    {
+        TextMeshProUGUI codeInputText = GameObject.Find("CodeInputText").GetComponent<TextMeshProUGUI>();
+        Level level = Levels.GetLevelByCode(codeInputText.text);
+
+        if (level is not null)
+        {
+
+            GameData.currentLevel = level.number;
+            SceneManager.LoadScene("level_dynamic");
+        }
+        else
+        {
+            // TODO This does not work
+            Image inputImage = GameObject.Find("CodeInput").GetComponent<Image>();
+            inputImage.color = new Color(255, 115, 115, 255);
+        }
     }
 }

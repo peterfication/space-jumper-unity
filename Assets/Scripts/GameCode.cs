@@ -5,20 +5,18 @@ using TMPro;
 
 public class GameCode : MonoBehaviour
 {
-    private GameLogic gameLogic;
     private TextMeshProUGUI textMeshPro;
 
     private void Start()
     {
-        gameLogic = GameObject.Find("GameLogic").GetComponent<GameLogic>();
-        textMeshPro = GetComponent<TMPro.TextMeshProUGUI>();
+        textMeshPro = GetComponent<TextMeshProUGUI>();
         SetLevelCode();
     }
 
     // Set the current level code in the text field.
     private void SetLevelCode()
     {
-        Level currentLevel = gameLogic.GetCurrentLevel();
+        Level currentLevel = Levels.GetCurrentLevel();
         textMeshPro.text = $"Code: {currentLevel.code}";
     }
 }
