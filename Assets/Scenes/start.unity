@@ -1333,6 +1333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ReturnToGameButton
       objectReference: {fileID: 0}
+    - target: {fileID: 5595407407956764106, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5595407407956764107, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
