@@ -10,6 +10,12 @@ because I forgot the name. So if somebody knows the name or even has a copy of i
 very happy to hear about it! :)
 ```
 
+## Contributing
+
+### Levels
+
+Feel free to provide a PR that adds a new level by adding it to [the Levels class](./Assets/Scripts/Levels.cs).
+
 ## Credits
 
 - Background image by [Stephen Rahn](https://stocksnap.io/author/srahn)
