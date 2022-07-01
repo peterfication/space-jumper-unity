@@ -238,11 +238,67 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuButtonText
       objectReference: {fileID: 0}
+    - target: {fileID: 5595407406669327972, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
+      propertyPath: m_text
+      value: Back to menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595407406669327978, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
+      propertyPath: m_Name
+      value: BackButtonText
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595407407956764106, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
+      propertyPath: m_Name
+      value: BackButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595407407956764107, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 904009156}
+    - target: {fileID: 5595407407956764107, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595407407956764107, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: EndMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595407408553885557, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595407408553885557, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595407408553885557, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595407408553885557, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595407408553885557, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 558.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595407408553885557, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595407408553885557, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -279.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5595407408553885557, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 141
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
 --- !u!224 &412499196 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4507541118072172604, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5595407408553885557, guid: 994b35b80e61948d695331d0d60ad909, type: 3}
   m_PrefabInstance: {fileID: 412499195}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
