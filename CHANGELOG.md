@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.0
+
+- Add more levels
+- Fix start menu keys render on big screens
+
 ## 1.1.0
 
 - Level codes Implemented
