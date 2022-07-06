@@ -31,7 +31,6 @@ public static class Levels
     }
 
     public static Level[] levels = new Level[] {
-        // Level 0
         new Level {
             number = 0,
             code = "posted upstart",
@@ -48,7 +47,6 @@ public static class Levels
             },
         },
 
-        // Level 1
         new Level {
             number = 1,
             code = "tactile rust",
@@ -65,7 +63,6 @@ public static class Levels
             },
         },
 
-        // Level 2
         new Level {
             number = 2,
             code = "urging confess",
@@ -82,7 +79,6 @@ public static class Levels
             },
         },
 
-        // Level 3
         new Level {
             number = 3,
             code = "outmost unicorn",
@@ -99,7 +95,6 @@ public static class Levels
             },
         },
 
-        // Level 4
         new Level {
             number = 4,
             code = "mating cursor",
@@ -116,7 +111,6 @@ public static class Levels
             },
         },
 
-        // Level 5
         new Level {
             number = 5,
             code = "",
@@ -133,7 +127,6 @@ public static class Levels
             },
         },
 
-        // Level 6
         new Level {
             number = 6,
             code = "",
@@ -150,7 +143,6 @@ public static class Levels
             },
         },
 
-        // Level 7
         new Level {
             number = 7,
             code = "",
@@ -167,7 +159,6 @@ public static class Levels
             },
         },
 
-        // Level 8
         new Level {
             number = 8,
             code = "",
@@ -184,7 +175,6 @@ public static class Levels
             },
         },
 
-        // Level 9
         new Level {
             number = 9,
             code = "",
@@ -201,7 +191,6 @@ public static class Levels
             },
         },
 
-        // Level 10
         new Level {
             number = 10,
             code = "",
@@ -218,7 +207,6 @@ public static class Levels
             },
         },
 
-        // Level 11
         new Level {
             number = 11,
             code = "",
@@ -235,7 +223,6 @@ public static class Levels
             },
         },
 
-        // Level 12
         new Level {
             number = 12,
             code = "",
@@ -252,7 +239,6 @@ public static class Levels
             },
         },
 
-        // Level 13
         new Level {
             number = 13,
             code = "",
@@ -269,7 +255,6 @@ public static class Levels
             },
         },
 
-        // Level 14
         new Level {
             number = 14,
             code = "",
@@ -286,7 +271,6 @@ public static class Levels
             },
         },
 
-        // Level 15
         new Level {
             number = 15,
             code = "",
@@ -303,7 +287,6 @@ public static class Levels
             },
         },
 
-        // Level 16
         new Level {
             number = 16,
             code = "",
@@ -320,7 +303,6 @@ public static class Levels
             },
         },
 
-        // Level 17
         new Level {
             number = 17,
             code = "",
@@ -337,7 +319,6 @@ public static class Levels
             },
         },
 
-        // Level 18
         new Level {
             number = 18,
             code = "",
@@ -354,7 +335,6 @@ public static class Levels
             },
         },
 
-        // Level 19
         new Level {
             number = 19,
             code = "",
@@ -371,7 +351,6 @@ public static class Levels
             },
         },
 
-        // Level 20
         new Level {
             number = 20,
             code = "",
@@ -388,7 +367,6 @@ public static class Levels
             },
         },
 
-        // Level 21
         new Level {
             number = 21,
             code = "",
@@ -405,7 +383,6 @@ public static class Levels
             },
         },
 
-        // Level 22
         new Level {
             number = 22,
             code = "",
@@ -422,7 +399,6 @@ public static class Levels
             },
         },
 
-        // Level 23
         new Level {
             number = 23,
             code = "",
@@ -439,7 +415,6 @@ public static class Levels
             },
         },
 
-        // Level 24
         new Level {
             number = 24,
             code = "",
@@ -456,7 +431,6 @@ public static class Levels
             },
         },
 
-        // Level 25
         new Level {
             number = 25,
             code = "",
@@ -473,7 +447,6 @@ public static class Levels
             },
         },
 
-        // // Level X
         // new Level {
         //     number = X,
         //     code = "",
