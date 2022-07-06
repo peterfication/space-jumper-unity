@@ -113,7 +113,7 @@ public static class Levels
 
         new Level {
             number = 5,
-            code = "",
+            code = "dwelling backup",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0 },
@@ -129,7 +129,7 @@ public static class Levels
 
         new Level {
             number = 6,
-            code = "",
+            code = "limelight prank",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -145,7 +145,7 @@ public static class Levels
 
         new Level {
             number = 7,
-            code = "",
+            code = "anvil morphing",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 2, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0 },
@@ -161,7 +161,7 @@ public static class Levels
 
         new Level {
             number = 8,
-            code = "",
+            code = "beach hand",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0 },
@@ -177,7 +177,7 @@ public static class Levels
 
         new Level {
             number = 9,
-            code = "",
+            code = "feast snub",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -193,7 +193,7 @@ public static class Levels
 
         new Level {
             number = 10,
-            code = "",
+            code = "recipient safeguard",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -209,7 +209,7 @@ public static class Levels
 
         new Level {
             number = 11,
-            code = "",
+            code = "expired knife",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -225,7 +225,7 @@ public static class Levels
 
         new Level {
             number = 12,
-            code = "",
+            code = "spinach copy",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -241,7 +241,7 @@ public static class Levels
 
         new Level {
             number = 13,
-            code = "",
+            code = "blimp tribesman",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -257,7 +257,7 @@ public static class Levels
 
         new Level {
             number = 14,
-            code = "",
+            code = "suitcase body",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -273,7 +273,7 @@ public static class Levels
 
         new Level {
             number = 15,
-            code = "",
+            code = "elaborate banjo",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 1, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0 },
@@ -289,7 +289,7 @@ public static class Levels
 
         new Level {
             number = 16,
-            code = "",
+            code = "entire destruct",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -305,7 +305,7 @@ public static class Levels
 
         new Level {
             number = 17,
-            code = "",
+            code = "saggy hermit",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -321,7 +321,7 @@ public static class Levels
 
         new Level {
             number = 18,
-            code = "",
+            code = "smashup easel",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 2, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -337,7 +337,7 @@ public static class Levels
 
         new Level {
             number = 19,
-            code = "",
+            code = "exploding slicer",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -353,7 +353,7 @@ public static class Levels
 
         new Level {
             number = 20,
-            code = "",
+            code = "escalate soccer",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 2, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -369,7 +369,7 @@ public static class Levels
 
         new Level {
             number = 21,
-            code = "",
+            code = "simple envelope",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -385,7 +385,7 @@ public static class Levels
 
         new Level {
             number = 22,
-            code = "",
+            code = "granular wife",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0 },
@@ -401,7 +401,7 @@ public static class Levels
 
         new Level {
             number = 23,
-            code = "",
+            code = "men revision",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 0, 0 },
@@ -417,7 +417,7 @@ public static class Levels
 
         new Level {
             number = 24,
-            code = "",
+            code = "related dwindle",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 2, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0 },
@@ -433,7 +433,7 @@ public static class Levels
 
         new Level {
             number = 25,
-            code = "",
+            code = "vitality playoff",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 0, 2, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -449,7 +449,7 @@ public static class Levels
 
         new Level {
             number = 26,
-            code = "",
+            code = "conform heaven",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0 },
@@ -465,7 +465,7 @@ public static class Levels
 
         new Level {
             number = 27,
-            code = "",
+            code = "verbally satirical",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -481,7 +481,7 @@ public static class Levels
 
         new Level {
             number = 28,
-            code = "",
+            code = "cheetah reiterate",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0 },
@@ -497,7 +497,7 @@ public static class Levels
 
         new Level {
             number = 29,
-            code = "",
+            code = "professed reporter",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -513,7 +513,7 @@ public static class Levels
 
         new Level {
             number = 30,
-            code = "",
+            code = "stifle moonrise",
             platforms = new int[][] {
               new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
               new int[] { 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0 },
@@ -542,5 +542,7 @@ public static class Levels
         //       new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 }
         //     },
         // },
+        //
+        // For level codes: https://diceware.dmuth.org/
     };
 }
