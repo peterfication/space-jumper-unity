@@ -2,6 +2,8 @@
 
 A small logical game about finding the right way 🎮 Developed in Unity.
 
+[Play it on itch.io](https://peterfication.itch.io/space-jumper) or [download a release (uncertified)](https://github.com/peterfication/space-jumper-unity/releases).
+
 ## DISCLAIMER
 
 ```
